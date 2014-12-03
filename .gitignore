@@ -1,0 +1,4 @@
+*.class
+*.jar
+.DS_Store
+war/WEB-INF/appengine-generated/local_db.bin

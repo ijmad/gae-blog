@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>Blog</title>
+
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="main.css" />
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
+    <script src="/main.js"></script>
+    <script type="text/javascript">
+	    var controller = new BlogController(new BlogModel(), new BlogView());
+        $(window).load(function() {
+        	controller.start();
+        });
+    </script>
+</head>
+
+<body>
+
+<header>Welcome to Your Blog</span>!</header>
+
+<header id="user" style="display:none; ">
+You're signed in as: &nbsp;&nbsp; <span id="email">foo@foo.com</span> &nbsp;&nbsp; [<a href="/api/v1/logout">Sign Out</a>]
+</header>
+
+<div id="loader"><img src="ajax-loader.gif" /></div>
+
+<section id="login" style="display:none; ">
+    <p>You have to sign in to access the blog.</p>
+    <p><a href="/api/v1/login"><img src="signin.png" /></a></p>
+</section>
+
+<nav style="display: none; ">
+    <header>Navigation</header>
+    
+    <ul>
+        <li><a id="linkMyPosts" href="javascript:controller.openMyPosts()">My Posts</a></li>
+        <li><a id="linkAllPosts" href="javascript:controller.openAllPosts()">All Posts</a></li>
+        <li><a id="linkNewPost" href="javascript:controller.openPostBox()">New Post</a></li>
+    </ul>
+</nav>
+
+<section id="posts" style="display:none; ">
+    <!-- <article>
+        <header>This is post 3</header>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur scelerisque dui ac dapibus pulvinar. 
+        In vitae vulputate nulla. Sed sed euismod leo. Ut imperdiet elementum sagittis. Aenean id feugiat felis. 
+        Phasellus consectetur massa ante, sit amet mattis justo imperdiet id. Ut accumsan, ipsum sed feugiat 
+        congue, odio nisi porttitor lorem, eu fermentum nunc velit eget tortor. In aliquet arcu ac urna accumsan 
+        commodo. Quisque eros lacus, scelerisque vel odio sed, bibendum mollis odio. Integer ornare eros magna, 
+        placerat sodales nisi pellentesque a. Donec posuere tellus justo, at vulputate libero ullamcorper vitae. 
+        Duis est nisl, egestas ut nulla in, sagittis pulvinar dolor. Pellentesque habitant morbi tristique 
+        senectus et netus et malesuada fames ac turpis egestas. Suspendisse auctor leo non enim adipiscing 
+        posuere. Pellentesque lacus elit, cursus quis scelerisque vel, adipiscing sit amet urna. Sed nec 
+        ullamcorper leo, quis condimentum ipsum.
+    </article> -->
+</section>
+
+<section id="comments" style="display:none; ">
+    <header>Comments</header>
+    <section id="comments_container"></section>
+    <footer>
+	    <form id="comment_form" onsubmit="controller.submitComment();"> 
+	        <header>Write a Comment!</header>
+	        
+	        <p>
+	            <label for="content">Comment: </label><textarea id="comment" type="text"></textarea>
+	        </p>
+	        
+	        <p>
+	           <input id="submit" type="submit" value="Submit!" />
+	        </p>
+	    </form>
+    </footer>
+</section>
+
+<section id="postbox" style="display: none; ">
+    <form id="postbox_form" onsubmit="controller.submitPost();"> 
+	    <header>Write a New Post!</header>
+	    
+	    <p>
+	        <label for="title">Title: </label><input id="title" type="text" />
+	    </p>
+	    
+	    <p>
+	        <label for="content">Content: </label><textarea id="content" type="text"></textarea>
+	    </p>
+	    
+	    <p>
+	       <input id="publish" type="submit" value="Publish!" />
+	    </p>
+	</form>
+</section>
+
+
+</body>
+</html>

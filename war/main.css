@@ -1,0 +1,139 @@
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+
+#overlay {
+	
+}
+
+header {
+	border-style: solid;
+	border-color: #ccc;
+	border-width: 0 0 3px 0;
+	
+	padding: 20px 0;
+	
+	font-size: 40pt;
+}
+
+header#user {
+	font-size: 10pt;
+	font-style: italic;
+}
+
+header#user #email {
+	font-size: 12pt;
+}
+
+#loader {
+	position: absolute;
+	right: 15px;
+	top: 30px;
+}
+
+nav {	
+	float: right;
+	
+	margin: 0;
+	padding: 0;
+	border: 0;
+	
+	width: 30%;
+	background-color: #fff;
+}
+
+nav header {
+    margin: 0 0 0 20px;
+    padding: 20px 10px;
+    border: 0;
+    
+    font-weight: bold;
+    font-size: 18pt; 
+}
+
+nav ul {
+	margin: 0 0 0 20px;
+	padding: 0 10px 100px 40px;
+	border: 0;
+}
+
+section#posts, section#comments {
+	float: left;
+	
+	margin: 0;
+    padding: 0;
+    border: 0;
+	
+	width: 70%;
+}
+
+section#login {
+    float: left;
+    
+    margin: 0;
+    padding: 0;
+    border: 0;
+    
+    width: 70%;
+}
+
+section#posts article, section#comments article {
+	padding: 20px 0;
+    font-size: 12pt; 
+}
+
+section#comments header {
+    font-size: 18pt;
+    border: 0;
+    padding: 0;
+}
+
+section#comments article, section#comments footer {
+	padding-left: 60px;
+}
+
+section#posts article header, section#posts footer header, section#postbox header {
+	margin: 0 0 5px 0;
+	padding: 0;
+	border: 0;
+	
+	font-weight: bold;
+	font-size: 18pt; 
+}
+
+section#comments article header, section#comments footer header {
+	border: 0;
+	font-size: 14pt;
+	margin-left: -20px;
+}
+
+section#postbox header {
+	padding-top: 20px;
+}
+
+section#posts article footer {
+	padding: 0;
+    font-style: italic;
+    text-align: right;
+}
+
+label {
+	display: block;
+}
+
+input, textarea {
+	width: 400px; 
+}
+
+textarea {
+	height: 100px; 
+}
+
+#publish, #submit {
+	width: 100px;
+}
+
+a.showing {
+	color: orange;
+	text-decoration: none;
+}
